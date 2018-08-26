@@ -1,0 +1,39 @@
+# 服务器配置:
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: utf-8
+#springMvc配置:
+spring:
+#  mvc:
+#    view:
+#      prefix: 
+#      suffix:
+  #时间转换器
+  jackson: 
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss 
+  #开启热部署  
+  devtools: 
+    restart:
+      enabled: true
+  #设置开发环境的配置文件
+  profiles: 
+    active: dev
+  #设置文件上传的限制大小
+  http:
+    multipart:
+      max-file-size: 30Mb
+      max-request-size: 30Mb     
+#mybatis配置:
+mybatis: 
+  configuration:
+    map-underscore-to-camel-case: true #驼峰命名
+  mapper-locations: mybatis/**/*Mapper.xml
+  typeAliasesPackage: cn.itcast.**.domain #别名
+
+#数据源配置
+
+
+
+  
